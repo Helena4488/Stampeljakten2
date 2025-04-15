@@ -47,12 +47,20 @@ function validateTidskrift() {
     }
 }
 
-function validateBild() {
+function validateDigidelcenter() {
     let answer = document.forms["myForm"]["answer"].value.toLowerCase(); 
     let wrongAnswer = document.forms["myForm"]["answer"].value;
     if (answer != "a") {
         document.getElementById("errorMessage").innerHTML = wrongAnswer + " var tyvärr fel svar. Försök igen!";
         document.forms["myForm"]["answer"].value = "";
         return false; 
+    }
+}
+
+function validateBarnavdelningen() {
+    let answer = document.forms["myForm"]["friend"].value;
+    if (answer != "tommyAnnika") {
+        document.getElementById("errorMessage").innerHTML = "Det var tyvärr fel svar. Försök igen!";
+        return false;
     }
 }
